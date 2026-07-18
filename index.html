@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Water – Agua y Soda a Domicilio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>Lucas Water – Hidratación Saludable</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
   <style>
     /* ── TOKENS ── */
     :root {
@@ -27,7 +27,7 @@
       overflow-x: hidden;
     }
 
-    /* ── BURBUJAS ANIMADAS ── */
+    /* ── BURBUJAS ANIMADAS DE FONDO ── */
     .burbujas {
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
       overflow: hidden;
@@ -67,10 +67,10 @@
       height: 64px;
     }
     .nav-logo {
-      font-family: 'Playfair Display', serif;
+      font-weight: 700;
       font-size: 1.4rem;
       color: var(--celeste);
-      letter-spacing: 0.04em;
+      letter-spacing: -0.02em;
     }
     .nav-logo span { color: var(--blanco); }
     nav ul { list-style: none; display: flex; gap: 2rem; }
@@ -90,37 +90,44 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 120px 2rem 80px;
+      padding: 150px 2rem 80px;
     }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(91,184,245,0.15);
-      border: 1px solid rgba(91,184,245,0.4);
-      color: var(--celeste);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.4rem 1.2rem;
-      border-radius: 100px;
-      margin-bottom: 2rem;
+    
+    /* Contenedor del branding principal optimizado */
+    .branding-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
     }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 8vw, 6.5rem);
+    .branding-title {
+      font-size: clamp(2.5rem, 6vw, 3.8rem);
       font-weight: 900;
-      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--blanco);
+      line-height: 1;
+    }
+    .branding-title span {
+      color: var(--celeste);
+    }
+    .branding-logo {
+      width: clamp(160px, 25vw, 230px); /* Ajuste de tamaño responsive más grande */
+      height: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.2;
       color: var(--blanco);
       margin-bottom: 1.5rem;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--celeste);
+      letter-spacing: -0.02em;
     }
     .hero p {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: rgba(240,248,255,0.65);
-      max-width: 520px;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(240,248,255,0.75);
+      max-width: 600px;
       line-height: 1.7;
       margin-bottom: 2.5rem;
     }
@@ -149,11 +156,11 @@
     }
     .ola svg { display: block; }
 
-    /* ── PRODUCTOS ── */
-    #productos {
+    /* ── COMPROMISO ── */
+    #compromiso {
       position: relative; z-index: 1;
       background: #0D2040;
-      padding: 80px 2rem;
+      padding: 80px 2rem 40px;
       text-align: center;
     }
     .section-label {
@@ -165,9 +172,72 @@
       margin-bottom: 0.75rem;
     }
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 3rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+    }
+    .texto-institucional {
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(240,248,255,0.8);
+    }
+    .texto-institucional p {
+      margin-bottom: 1.8rem;
+    }
+    .valores-destacados {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--celeste);
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+      word-spacing: 4px;
+    }
+
+    /* ── POR QUÉ ELEGIRNOS ── */
+    .elegirnos-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 2rem;
+    }
+    .elegirnos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .elegirnos-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .elegirnos-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .elegirnos-item h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--blanco);
+      margin-bottom: 0.5rem;
+    }
+    .elegirnos-item p {
+      font-size: 0.95rem;
+      color: rgba(240,248,255,0.65);
+      line-height: 1.5;
+    }
+
+    /* ── PRODUCTOS ── */
+    #productos {
+      position: relative; z-index: 1;
+      background: var(--azul-profundo);
+      padding: 80px 2rem;
+      text-align: center;
     }
     .cards {
       display: flex; flex-wrap: wrap;
@@ -189,53 +259,28 @@
       transform: translateY(-6px);
       border-color: rgba(91,184,245,0.5);
     }
-    .card-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .card-icon { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+      margin-bottom: 1rem; 
+    }
     .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
       margin-bottom: 0.75rem;
       color: var(--celeste);
+      letter-spacing: -0.01em;
     }
     .card p {
-      color: rgba(240,248,255,0.6);
+      color: rgba(240,248,255,0.65);
       font-size: 0.95rem;
       line-height: 1.65;
     }
 
-    /* ── POR QUÉ ELEGIRNOS ── */
-    #ventajas {
-      position: relative; z-index: 1;
-      background: var(--azul-profundo);
-      padding: 80px 2rem;
-      text-align: center;
-    }
-    .ventajas-grid {
-      display: flex; flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .ventaja {
-      flex: 1 1 200px;
-      max-width: 220px;
-      padding: 1.5rem 1rem;
-    }
-    .ventaja-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
-    .ventaja h4 {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-      color: var(--blanco);
-    }
-    .ventaja p {
-      color: rgba(240,248,255,0.5);
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    /* ── COMENTARIOS ── */
-    #comentarios {
+    /* ── CONTACTO ── */
+    #contacto {
       position: relative; z-index: 1;
       background: #0D2040;
       padding: 80px 2rem;
@@ -296,7 +341,7 @@
       border-top: 1px solid rgba(91,184,245,0.1);
       text-align: center;
       padding: 2rem;
-      color: rgba(240,248,255,0.35);
+      color: rgba(240,248,255,0.4);
       font-size: 0.85rem;
     }
 
@@ -337,20 +382,22 @@
 <nav>
   <div class="nav-logo">Lucas<span> Water</span></div>
   <ul>
+    <li><a href="#compromiso">Nosotros</a></li>
     <li><a href="#productos">Productos</a></li>
-    <li><a href="#ventajas">Nosotros</a></li>
-    <li><a href="#comentarios">Contacto</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Delivery a domicilio</div>
-  <h1>Agua pura.<br><em>Soda fresca.</em><br>En tu puerta.</h1>
-  <p>Lucas Water lleva hidratación de calidad hasta donde estés. Agua natural y soda con gas, en bidones y sifones.</p>
-  
-  <!-- IMAGEN REUBICADA ABAJO DEL TEXTO -->
-  <img src="water.png" alt="Lucas" style="width: 100%; max-width: 140px; height: auto; border-radius: 50%; margin-top: 0.5rem; margin-bottom: 1.5rem; object-fit: cover; position: relative; z-index: 2;">
+  <!-- Contenedor con el Texto Grande de Dos Colores Arriba y el Logo Grande Abajo -->
+  <div class="branding-hero">
+    <div class="branding-title"><span>Lucas</span> Water</div>
+    <img src="logo.png" alt="Logo Lucas Water" class="branding-logo">
+  </div>
+
+  <h1>Hidratación saludable<br>para una vida mejor</h1>
+  <p>Llevamos agua mineral fresca, pura y segura directo a tu hogar, oficina o comercio. Porque cuidar tu salud empieza por algo tan simple e importante como tomar agua.</p>
   
   <a class="btn-primary" id="hero-wa" href="#" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45"/></svg>
@@ -365,20 +412,45 @@
   </svg>
 </div>
 
-<!-- PRODUCTOS -->
-<section id="productos">
-  <div class="section-label">Lo que ofrecemos</div>
-  <h2 class="section-title">Nuestros productos</h2>
-  <div class="cards">
-    <div class="card">
-      <div class="card-icon">💧</div>
-      <h3>Agua Natural</h3>
-      <p>Agua purificada en bidones de 12 y 20 litros. Sin gas, cristalina, ideal para toda la familia.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🫧</div>
-      <h3>Soda con Gas</h3>
-      <p>Sifones de soda carbonatada al punto justo. Perfecta para preparar bebidas, digestivos y cócteles.</p>
+<!-- COMPROMISO INSTITUCIONAL -->
+<section id="compromiso">
+  <div class="section-label">Nosotros</div>
+  <h2 class="section-title">Comprometidos con tu bienestar</h2>
+  <div class="texto-institucional">
+    <p>En <strong>Lucas Water</strong> creemos que una buena salud comienza con una correcta hidratación. Por eso acercamos agua mineral de calidad a hogares, empresas y comercios, garantizando pureza, frescura y confianza en cada entrega, ayudando a que cada persona disfrute de una vida más sana, activa y equilibrada.</p>
+    
+    <p>El agua es esencial para el funcionamiento del organismo. Mantener una hidratación adecuada contribuye al bienestar general, favorece la concentración, ayuda a conservar la energía y acompaña un estilo de vida saludable.</p>
+    
+    <p>Nuestro compromiso es brindar un servicio eficiente, puntual y responsable, ofreciendo soluciones adaptadas a las necesidades de cada cliente. Trabajamos cada día para que el acceso a agua de calidad sea simple, seguro y confiable, porque entendemos que cuidar la salud comienza con los hábitos más importantes de la vida cotidiana.</p>
+    
+  </div>
+
+  <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+  <div class="elegirnos-container">
+    <div class="section-label">Por qué elegirnos</div>
+    <h3 class="section-title" style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 1.5rem;">Calidad que se nota</h3>
+    
+    <div class="elegirnos-grid">
+      <div class="elegirnos-item">
+        <div class="elegirnos-icon">🚚</div>
+        <h4>Delivery rápido</h4>
+        <p>Llevamos el pedido directamente a tu puerta.</p>
+      </div>
+      <div class="elegirnos-item">
+        <div class="elegirnos-icon">✅</div>
+        <h4>Agua purificada</h4>
+        <p>Control de calidad en cada lote.</p>
+      </div>
+      <div class="elegirnos-item">
+        <div class="elegirnos-icon">📦</div>
+        <h4>Bidones limpios</h4>
+        <p>Higienizados y controlados en cada entrega.</p>
+      </div>
+      <div class="elegirnos-item">
+        <div class="elegirnos-icon">💬</div>
+        <h4>Atención directa</h4>
+        <p>Pedidos por WhatsApp, sin vueltas.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -390,30 +462,31 @@
   </svg>
 </div>
 
-<!-- VENTAJAS -->
-<section id="ventajas">
-  <div class="section-label">Por qué elegirnos</div>
-  <h2 class="section-title">Calidad que se nota</h2>
-  <div class="ventajas-grid">
-    <div class="ventaja">
-      <div class="ventaja-icon">🚚</div>
-      <h4>Delivery rápido</h4>
-      <p>Llevamos el pedido directamente a tu puerta.</p>
+<!-- PRODUCTOS -->
+<section id="productos">
+  <div class="section-label">Lo que ofrecemos</div>
+  <h2 class="section-title">Nuestros Productos</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">
+        <svg width="46" height="54" viewBox="0 0 30 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 2C15 2 27 16.4 27 23.6C27 30.444 21.6274 36 15 36C8.37258 36 3 30.444 3 23.6C3 16.4 15 2 15 2Z" fill="#5BB8F5"/>
+        </svg>
+      </div>
+      <h3>Agua Mineral Natural</h3>
+      <p>Agua purificada de máxima pureza en bidones retornables de 12 y 20 litros. Cristalina y óptima para el consumo familiar o empresarial.</p>
     </div>
-    <div class="ventaja">
-      <div class="ventaja-icon">✅</div>
-      <h4>Agua purificada</h4>
-      <p>Control de calidad en cada lote.</p>
-    </div>
-    <div class="ventaja">
-      <div class="ventaja-icon">📦</div>
-      <h4>Bidones limpios</h4>
-      <p>Higienizados y controlados en cada entrega.</p>
-    </div>
-    <div class="ventaja">
-      <div class="ventaja-icon">💬</div>
-      <h4>Atención directa</h4>
-      <p>Pedidos por WhatsApp, sin vueltas.</p>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="50" height="54" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="24" r="6" stroke="#5BB8F5" stroke-width="2.5"/>
+          <circle cx="25" cy="14" r="4" stroke="#5BB8F5" stroke-width="2.5"/>
+          <circle cx="15" cy="8" r="2.5" stroke="#5BB8F5" stroke-width="2"/>
+          <circle cx="28" cy="26" r="2" stroke="#5BB8F5" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3>Soda en Sifón</h3>
+      <p>Sifones de soda con gas carbonatado en su punto justo. Perfecta, fresca y con burbujas intensas para acompañar tus comidas.</p>
     </div>
   </div>
 </section>
@@ -426,9 +499,9 @@
 </div>
 
 <!-- CONTACTO -->
-<section id="comentarios">
+<section id="contacto">
   <div class="section-label">Contacto</div>
-  <h2 class="section-title">Hacé tu pedido o dejá un comentario</h2>
+  <h2 class="section-title">Hacé tu pedido online</h2>
   <div class="form-wrap">
     <label for="nombre">Tu nombre</label>
     <input type="text" id="nombre" placeholder="Ej: María García" />
@@ -436,8 +509,8 @@
     <label for="telefono">Teléfono (opcional)</label>
     <input type="tel" id="telefono" placeholder="Ej: 11 1234-5678" />
 
-    <label for="mensaje">Tu pedido o comentario</label>
-    <textarea id="mensaje" placeholder="Ej: Quiero 2 bidones de 20L y un sifón de soda para el martes..."></textarea>
+    <label for="mensaje">Tu pedido o consulta</label>
+    <textarea id="mensaje" placeholder="Ej: Hola! Quisiera encargar 2 bidones de 20L para entregar esta semana..."></textarea>
 
     <a class="btn-whatsapp" id="btn-enviar" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -448,7 +521,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Lucas Water · Agua y Soda a Domicilio</p>
+  <p>© 2026 Lucas Water - Agua y Soda a Domicilio - Todos los derechos reservados.</p>
 </footer>
 
 <!-- BOTÓN FLOTANTE WHATSAPP -->
@@ -463,13 +536,9 @@
     return `https://wa.me/${NUMERO_WA}?text=${encodeURIComponent(texto)}`;
   }
 
-  // Botón del hero
   document.getElementById("hero-wa").href = buildWALink("Hola Lucas Water! Quiero hacer un pedido 👋");
-
-  // Botón flotante
   document.getElementById("wa-flotante").href = buildWALink("Hola Lucas Water! 👋");
 
-  // Botón del formulario
   document.getElementById("btn-enviar").addEventListener("click", function(e) {
     e.preventDefault();
     const nombre  = document.getElementById("nombre").value.trim();
