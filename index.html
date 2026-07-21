@@ -304,6 +304,52 @@
       font-size: 0.95rem;
       line-height: 1.65;
     }
+	
+	/* ── ZONAS DE COBERTURA ── */
+	#cobertura {
+	  position: relative; z-index: 1;
+	  background: var(--azul-profundo);
+	  padding: 60px 2rem 40px;
+	  text-align: center;
+	}
+
+	.cobertura-subtitle {
+	  color: rgba(240,248,255,0.75);
+	  font-size: 1rem;
+	  margin-bottom: 2rem;
+	}
+
+	.barrios-grid {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  gap: 0.8rem;
+	  max-width: 850px;
+	  margin: 0 auto;
+	}
+
+	.barrio-tag {
+	  background: rgba(91,184,245,0.1);
+	  border: 1px solid rgba(91,184,245,0.3);
+	  color: var(--blanco);
+	  padding: 0.6rem 1.2rem;
+	  border-radius: 50px;
+	  font-size: 0.95rem;
+	  font-weight: 500;
+	  transition: background 0.2s, transform 0.2s;
+	}
+
+	.barrio-tag:hover {
+	  background: rgba(91,184,245,0.25);
+	  transform: translateY(-2px);
+	}
+
+	.cobertura-nota {
+	  margin-top: 2rem;
+	  font-size: 0.85rem;
+	  color: rgba(240,248,255,0.5);
+	  font-style: italic;
+	}
 
     /* ── CONTACTO ── */
     #contacto {
@@ -494,6 +540,27 @@
         <p>Pedidos por WhatsApp, sin vueltas.</p>
       </div>
     </div>
+  </div>
+  
+  <!-- BARRIOS DE COBERTURA (Agregado acá) -->
+  <div style="margin-top: 4rem; text-align: center;">
+    <div class="section-label">Zona de Reparto</div>
+    <h3 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem;">Barrios donde distribuimos</h3>
+    <p class="cobertura-subtitle">Llegamos con nuestro servicio a los siguientes barrios de Córdoba Capital y alrededores:</p>
+    
+    <div class="barrios-grid">
+      <span class="barrio-tag">📍 Cofico</span>
+      <span class="barrio-tag">📍 Alta Córdoba</span>
+      <span class="barrio-tag">📍 Centro</span>
+      <span class="barrio-tag">📍 Nueva Córdoba</span>
+      <span class="barrio-tag">📍 General Paz</span>
+      <span class="barrio-tag">📍 Alberdi</span>
+      <span class="barrio-tag">📍 Alto Alberdi</span>
+      <span class="barrio-tag">📍 Villa Páez</span>
+      <span class="barrio-tag">📍 Los Plátanos</span>
+      <span class="barrio-tag">📍 Los Naranjos</span>
+    </div>
+    <p class="cobertura-nota">¿Tu barrio no está en la lista? ¡Consultanos por WhatsApp de todos modos!</p>
   </div>
 </section>
 
